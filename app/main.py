@@ -1,5 +1,7 @@
-from fastapi import FastAPI, Depends, HTTPException, status
-from fastapi.responses import RedirectResponse
+from fastapi import FastAPI, Depends, HTTPException, status, Request
+from fastapi.responses import RedirectResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 from sqlmodel import Session, select
 from .database import engine, get_session
 from .models import SQLModel, Link
@@ -9,9 +11,11 @@ import datetime
 
 app = FastAPI(title="QuickPath")
 
+templates = Jinja2Templates(directory="app/templates")
+
 @app.get("/")
-async def root():
-    return {"message": "Welcome to QuickPath, the URL shortener app!"}
+async def root(request: Request):
+    return templates.TemplateResponse(request=request, name="index.html")
 
 # Crée toutes les tables au lancement (simple pour SQLite)
 SQLModel.metadata.create_all(bind=engine)
