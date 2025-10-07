@@ -3,5 +3,30 @@
 {% block title %} Home {% endblock %}
 
 {% block maincontent %} 
-HOME
+<form action="/links" method="post" id="link-form">
+    <input type="url" name="url" id="url">
+    <input type="submit" value="Shorten URL!">
+</form>
+{% endblock %}
+
+{% block script %}
+<script>
+    document.getElementById("link-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const response = await fetch("/links", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                url: document.getElementById("url").value,
+                expires_at: null
+            })
+        });
+
+        const data = await response.json();
+        console.log(data);
+    });
+</script>
 {% endblock %}
