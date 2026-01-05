@@ -1,0 +1,115 @@
+:root {
+    --logo-color-light: #0CA5AD;
+    --logo-color-dark: #2D4B59;
+    --background-light: #f2f5f9;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background: var(--background-light);
+    color: #0f172a;
+}
+
+h1 {
+    color: var(--logo-color-light);
+}
+
+h1 span {
+    color: var(--logo-color-dark);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Header */
+/* .header {
+    text-align: center;
+    padding: 40px 20px 20px;
+} */
+
+
+
+.header-logo {
+    max-height: 70px;
+}
+
+.header-break {
+    border-bottom-color: var(--logo-color-light);
+}
+
+/* .header .container {
+    border-bottom: 1px solid var(--logo-color-light);
+} */
+
+/* .tagline {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #94a3b8;
+} */
+
+/* Form */
+.form {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--logo-color-light);
+    box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+    justify-content: space-between;
+}
+
+.input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    color: #0f172a;
+    background: var(--background-light);
+}
+
+.button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--logo-color-light);
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-family: Roboto, sans-serif;
+}
+
+/* Index */
+
+.main-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-logo-icon {
+    max-width: 80px;
+
+}
+
+.main-logo-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-top: -1.3rem;
+}

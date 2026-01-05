@@ -11,6 +11,8 @@ import datetime
 
 app = FastAPI(title="QuickPath")
 
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
+
 templates = Jinja2Templates(directory="app/templates")
 
 @app.get("/")

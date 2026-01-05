@@ -2,11 +2,22 @@
 
 {% block title %} Home {% endblock %}
 
-{% block maincontent %} 
-<form action="/links" method="post" id="link-form">
-    <input type="url" name="url" id="url">
-    <input type="submit" value="Shorten URL!">
-</form>
+{% block maincontent %}
+<div class="container">
+    <div class="main-logo">
+        <img class="main-logo-icon" src="{{ url_for('static', path='img/quickpath_symbol_256.png') }}" alt="QuickPath Symbol">
+
+        <h1 class="main-logo-title">
+            Quick<span>Path</span>
+        </h1>
+    </div>
+
+    <form action="/links" method="post" id="link-form" class="form">
+        <input type="url" name="url" id="url" class="input" required placeholder="https://website.com/long-url">
+        <input type="submit" class="button" value="Shorten URL!">
+    </form>
+</div>
+
 {% endblock %}
 
 {% block script %}
