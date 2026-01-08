@@ -11,10 +11,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: Roboto, sans-serif;
     background: var(--background-light);
     color: #0f172a;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -23,6 +29,10 @@ h1 {
 
 h1 span {
     color: var(--logo-color-dark);
+}
+
+.main {
+    flex: 1;
 }
 
 /* Container */
@@ -35,12 +45,6 @@ h1 span {
 
 
 /* Header */
-/* .header {
-    text-align: center;
-    padding: 40px 20px 20px;
-} */
-
-
 
 .header-logo {
     max-height: 70px;
