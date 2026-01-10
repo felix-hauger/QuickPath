@@ -109,11 +109,56 @@ h1 span {
 
 .main-logo-icon {
     max-width: 80px;
-
+    margin-top: 3rem;
 }
 
 .main-logo-title {
     font-size: 1.9rem;
     font-weight: 700;
     margin-top: -1.3rem;
+}
+
+/*****************
+DESKTOP / LAPTOP
+*****************/
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        max-width: 80%;
+    }
+
+    .main-logo {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .main-logo-icon {
+        max-width: 150px;
+    }
+
+    .main-logo-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+
+    .form {
+        display: flex;
+        gap: 12px;
+        padding: 30px 40px;
+        border-radius: 22px;
+        justify-self: center;
+    }
+
+    .input {
+        margin-bottom: 0;
+        flex: 1;
+        font-size: 1em;
+    }
+
+    .button {
+        width: auto;
+        padding: 0 20px;
+        white-space: nowrap;
+    }
 }
